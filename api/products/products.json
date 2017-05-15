@@ -1,0 +1,43 @@
+[
+    {
+        "productId": 1,
+        "productName": "Leaf Rake",
+        
+        "releaseDate": "May 01, 2017",
+        "description": "Leaf rake with 54-inch metal. ",
+        "price": 19.95,        
+        "imageUrl": "images/leaf_rake.jpg"
+    },
+    {
+        "productId": 2,
+        "productName": "Garden Cart",        
+        "releaseDate": "May 02, 2017",
+        "description": "Wounderful Garden Cart included a lot of supplies for your safety",
+        "price": 32.99,        
+        "imageUrl": "images/gardencart.jpg"
+    },
+    {
+        "productId": 5,
+        "productName": "Silver Hammer",        
+        "releaseDate": "May 03, 2017",
+        "description": "Steel hammer for everyone",
+        "price": 8.9,        
+        "imageUrl": "images/hammer.jpg"
+    },
+    {
+        "productId": 8,
+        "productName": "Industrial Saw",        
+        "releaseDate": "May 04, 2017",
+        "description": "20-inch made by metal",
+        "price": 11.55,        
+        "imageUrl": "images/saw.jpg"
+    },
+    {
+        "productId": 10,
+        "productName": "Game Controller",        
+        "releaseDate": "May 05, 2017",
+        "description": "Universal game controller for you kids",
+        "price": 35.95,        
+        "imageUrl": "images/controller.png"
+    }
+]

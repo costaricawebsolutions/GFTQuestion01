@@ -1,0 +1,11 @@
+thead {
+    color: #337AB7;
+}
+a#butItem{
+    font-size:15px;
+    font-weight: bold;
+}
+span#warningMessage{
+    color:red;
+    font-weight: bold;
+}

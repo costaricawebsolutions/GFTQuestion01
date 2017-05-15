@@ -1,0 +1,81 @@
+<div class='panel panel-primary' *ngIf='product'>
+    <div class='panel-heading' style='font-size:large'>
+        {{pageTitle + ': ' + product.productName}} aaa{{testpage}}ddd
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-3'>Name:</div>
+                    <div class='col-md-6'>{{product.productName}}</div>
+                </div>
+
+                <div class='row'>
+                    <div class='col-md-3'>Description:</div>
+                    <div class='col-md-6'>{{product.description}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Availability:</div>
+                    <div class='col-md-6'>{{product.releaseDate}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Price:</div>
+                    <div class='col-md-6'>${{product.price}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-3'>Cash: </div>
+                    <div class='col-md-6'>
+                        <input class="form-control" type="text" id="cash" placeholder="Cash" [(ngModel)]='cash'>
+                    </div>
+                </div>
+                <br />
+                <div class='row'>
+                    <div class='col-md-3'>Change Due: </div>
+                    <div class='col-md-6'>
+                        <input class="form-control" type="text" id="change" [(ngModel)]='changereturn'>
+                    </div>
+
+                </div>
+                <br />
+                <div class='row'>
+                    <div class='col-md-3'>
+                        <button (click)="processOrder();" type="button" class="btn btn-primary">Submit your order</button>
+                    </div>
+                    <div class='col-md-6'>
+                        <span *ngIf='showMessage' id="warningMessage">{{errorMessage}}</span>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class='col-md-6'>
+                <img class='center-block img-responsive' [style.width.px]='200' [style.margin.px]='2' [src]='product.imageUrl' [title]='product.productName'>
+            </div>
+        </div>
+    </div>
+    <div class='table-responsive'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th><h1>Your Cash Combinations is</h1>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let changes of cashChange'>
+                    <td>
+                        <h3> {{changes}}</h3>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>
+</div>
