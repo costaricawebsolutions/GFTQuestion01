@@ -68,8 +68,9 @@
                     <td>
                         <h3> {{changes}}</h3>
                     </td>
+					<td>1</td>
                 </tr>
-		    <tr>
+		    <tr *ngIf='showClosedPay'>
 			    <td>
 				    <h2>Closed</h2>
 			    </td>
@@ -77,7 +78,7 @@
             </tbody>
         </table>
     </div>
-	<h2>Closed</h2>
+	
 
     <div class='panel-footer'>
         <a class='btn btn-default' (click)='onBack()' style='width:80px'>
