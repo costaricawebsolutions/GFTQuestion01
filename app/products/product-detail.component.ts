@@ -25,6 +25,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     cashReturn: any;
     cashChange: any;
     changereturn:number;
+    showClosedPay:boolean;
 
 
 
@@ -39,6 +40,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
+        this.showClosedPay = false;
         this.cash = 0.0;
         this.change = 0;
         this.totalAvailable = 0;
@@ -195,7 +197,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
 
 
     processOrder(): void {
-
+        this.showClosedPay = false;
         let cashReturn: number;
         let cashpaid:number = this.cash;
         this.changereturn = cashpaid - this.product.price;
@@ -231,7 +233,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
                 }
 
 
-
+                this.showClosedPay = true;
                 this.showMessage = false;
                 this.errorMessage = "Closed";
             }
